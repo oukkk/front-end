@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Greeting Example</title>
+</head>
+<body>
+
+  <label for="nameInput">Name:</label>
+  <input type="text" id="nameInput" placeholder="Type your name" />
+
+  <h2>
+    Hi <span id="greetingName"></span>, <span id="greetingName2"></span>
+  </h2>
+
+  <script>
+    const nameInput = document.getElementById('nameInput');
+    const greetingName = document.getElementById('greetingName');
+    const greetingName2 = document.getElementById('greetingName2');
+
+    nameInput.addEventListener('input', function(event) {
+      const currentValue = event.target.value;
+      greetingName.textContent = currentValue;
+      greetingName2.textContent = currentValue;
+    });
+  </script>
+</body>
+</html>
