@@ -129,7 +129,7 @@ const datas = [
         id: 7,
         firstName: "Tyler",
         lastname: "Durden",
-        job: "Boxer",
+        job: "Imaginary ego",
         active: false,
         height: 180,
         image: "https://i.scdn.co/image/ab67616d00001e0203f29060e8ea0d21a476dc76",
@@ -140,7 +140,7 @@ const datas = [
             },
             {
                 id: 7,
-                name: "boxing gloves",
+                name: "red leather jacket",
             }
         ]
     },
@@ -148,7 +148,7 @@ const datas = [
     { //8
         id: 8,
         firstName: "Azzaya",
-        lastname: "Amarbold",
+        lastname: "Trnshan",
         job: "arhichin",
         active: true,
         height: 150,
@@ -419,7 +419,7 @@ export default function InfoCards() {
   console.log(filteredItems);
 
   return (
-    <div className="min-h-screen bg-black p-8">
+    <div className="min-h-screen bg-white p-8">
       <div className="fixed top-0 left-0 w-full bg-white flex justify-between items-center p-4 shadow-lg z-10">
         <input
           type="text"
@@ -442,7 +442,7 @@ export default function InfoCards() {
             {filteredItems.map((person, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg rounded-lg p-6 flex items-center w-full space-x-6 hover:shadow-xl transition"
+                className="bg-white shadow-lg border-r-black rounded-lg p-6 flex items-center w-full space-x-6 hover:shadow-xl transition"
               >
                 <img
                   src={person.image}
@@ -482,6 +482,7 @@ export default function InfoCards() {
                 <img
                   src={person.image}
                   alt={`${person.firstName} ${person.lastname}`}
+                                                   y
                   className="w-24 h-24 rounded-full border-4 border-gray-200 mb-4"
                 />
                 <h2 className="text-xl font-semibold text-gray-900">
